@@ -1,0 +1,639 @@
+body {
+
+  background-image: none;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #af2020;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url('chakra.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  opacity: 0.4;
+  pointer-events: none;
+  animation: rotateBackground 70s linear infinite;
+}
+
+@keyframes rotateBackground {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg,
+      #ffe6a7,
+      #f9d8b3,
+      #f2c6c8,
+      #e8b3d4);
+}
+
+.intro {
+  position: relative;
+  top: 50%;
+  left: 20px; 
+  transform: translateY(-50%);
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.intro {
+  position: absolute;
+  top: 45%;
+  left: 30px; 
+  transform: translateY(-50%);
+  font-family: 'Arial', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #333;
+}
+
+.about {
+  position: absolute;
+  top: 100%;
+  left: -15px; 
+  transform: translateY(-50%);
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f51515;
+  /* Text color */
+}
+
+
+.buttons {
+  position: absolute;
+  top: calc(50% + 60px);
+  left: 100px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 25px;
+  background-color: #a33c3c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 25px;
+  /* Change the font size */
+  color: #d34545;
+  /* Change the text color */
+  font-weight: bold;
+  /* Set font weight */
+  margin-left: 45px;
+  font-family: 'Times New Roman', Times, serif;
+  /* Add any other desired styles */
+}
+
+/* Previous styles remain unchanged */
+
+/* Center the image and make text/buttons responsive for mobile devices */
+@media (max-width: 767px) {
+  body::after {
+    top: -30%;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-position: center;
+    animation: rotateBackground 70s linear infinite;
+  }
+
+  .intro {
+    font-size: 30px;
+    top: 250px
+  }
+
+  .intro::after {
+    content: '';
+    display: block;
+    width: 200px;
+    /* Adjust the width of the line as needed */
+    height: 5px;
+    /* Adjust the height/thickness of the line */
+    background-color: #000000;
+    /* Color of the line */
+    margin-top: -20px;
+    /* Adjust the distance between text and line */
+  }
+
+  .about {
+    margin-top: 150px;
+    font-size: 50px;
+
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    top: calc(70% + 30px);
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .buttons button {
+    margin: 0 5px;
+  }
+}
+
+/* Keep the rotating animation */
+@keyframes rotateBackground {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.cards-section{
+  position:absolute;
+  margin-top: 850px;
+  background: transparent;
+  
+}
+
+/* about section */
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.text-blk {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  line-height: 20px;
+  color: white;
+  font-size: 14px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.responsive-container-block.bigContainer {
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: transparent;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  margin: 0 0 0 0;
+}
+
+.responsive-container-block.Container {
+  max-width: 1320px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-bottom: 80px;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+}
+
+.responsive-container-block.leftSide {
+  width: auto;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  flex-direction: column;
+  position: static;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  max-width: 300px;
+}
+
+.text-blk.heading {
+  font-size: 40px;
+  line-height: 64px;
+  font-weight: 900;
+  color: #00B2EB;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+
+.text-blk.btn {
+  color: rgb(0, 178, 235);
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(160, 121, 0, 0.2) 0px 12px 35px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+.responsive-container-block.rightSide {
+  width: 675px;
+  position: relative;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  display: flex;
+  height: 700px;
+  min-height: auto;
+}
+
+.number1img {
+  margin-top: 39%;
+  margin-right: 80%;
+  margin-bottom: 29%;
+  margin-left: 0px;
+  height: 32%;
+  width: 20%;
+  position: absolute;
+}
+
+.number2img {
+  margin-top: 19%;
+  margin-right: 42%;
+  margin-bottom: 42%;
+  margin-left: 23%;
+  width: 35%;
+  height: 39%;
+  position: absolute;
+}
+
+.number3img {
+  width: 13%;
+  height: 21%;
+  position: absolute;
+  margin-top: 62%;
+  margin-right: 64%;
+  margin-bottom: 30%;
+  margin-left: 23%;
+}
+
+.number4vid {
+  width: 34%;
+  height: 33%;
+  position: absolute;
+  margin-top: 62%;
+  margin-right: 27%;
+  margin-bottom: 0px;
+  margin-left: 39%;
+}
+
+.number5img {
+  position: absolute;
+  width: 13%;
+  height: 21%;
+  margin-top: 38%;
+  margin-right: 27%;
+  margin-bottom: 41%;
+  margin-left: 60%;
+}
+
+.number6img {
+  position: absolute;
+  margin-top: 0px;
+  margin-right: 3%;
+  margin-bottom: 67%;
+  margin-left: 62%;
+  width: 35%;
+  height: 33%;
+}
+
+.number7img {
+  position: absolute;
+  width: 25%;
+  margin-top: 40%;
+  margin-right: 0px;
+  margin-bottom: 18%;
+  margin-left: 75%;
+  height: 42%;
+}
+
+.text-blk.subHeading {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+@media (max-width: 1024px) {
+  .responsive-container-block.Container {
+    flex-direction: column-reverse;
+  }
+
+  .text-blk.heading {
+    text-align: center;
+    max-width: 370px;
+  }
+
+  .text-blk.subHeading {
+    text-align: center;
+  }
+
+  .responsive-container-block.leftSide {
+    align-items: center;
+    max-width: 480px;
+  }
+
+  .responsive-container-block.rightSide {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-left: auto;
+  }
+
+  .responsive-container-block.rightSide {
+    margin: 0 auto 70px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-container-block.rightSide {
+    width: 450px;
+    height: 450px;
+  }
+
+  .responsive-container-block.leftSide {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  .number1img {
+    display: none;
+  }
+
+  .number2img {
+    display: none;
+  }
+
+  .number4vid {
+    display: none;
+  }
+  .number5img {
+    display: none;
+  }
+
+  .number6img {
+    display: none;
+  }
+
+  .number7img {
+    display: none;
+  }
+
+  .responsive-container-block.rightSide {
+    width: 100%;
+    height: 250px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 100px;
+    margin-left: 0px;
+  }
+
+  .number3img {
+    position: static;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .text-blk.heading {
+    font-size: 25px;
+    line-height: 40px;
+    max-width: 370px;
+    width: auto;
+  }
+
+  .text-blk.subHeading {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .responsive-container-block.leftSide {
+    width: 100%;
+  }
+}
+
+.carousel-item img {
+  margin-bottom: 50;
+  width: 100%;
+  height: 250px; /* Set the desired height */
+  /* Maintain aspect ratio and cover */
+}
+
+/* Make the carousel responsive for smaller devices */
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+}
+
+/* contact form */
+/* contact us form  */
+/* Designing Contact Us form */ 
+.contact {
+  display: flex;
+  margin: auto;
+  padding: 0%;
+}
+
+.contactfrm {
+  padding: 2rem;
+  padding-top: 0%;
+  font-family: 'PT Serif', serif;
+}
+
+.contactfrm h1 {
+  text-align: center;
+  /* font-size: 1.25rem; */
+}
+
+.contactfrm p {
+  /* font-size: 2rem; */
+  text-align: center;
+}
+
+.form {
+  background-color:transparent;
+  color: black;
+  /* font-family: 'Kaushan Script', cursive; */
+  border: 0.5px solid rgb(2, 0, 0);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  /* padding-bottom: 5rem; */
+}
+
+.form h2 {
+  font-weight: bold;
+  padding-bottom: 1rem;
+  text-align: center;
+  /* font-size: 4rem; */
+}
+
+.message {
+  margin-bottom: 1rem;
+}
+
+.fc {
+  /* margin: 0.25rem 0; */
+  background-color: gray;
+}
+/* dialer and whatsapp buttons  */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  /* Adjust styles as needed */
+}
+
+.dialer-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  /* Adjust styles as needed */
+}
+
+/* Adjust styles for the buttons */
+.whatsapp-button img,
+.dialer-button img {
+  width: 50px; /* Adjust the size of the icons */
+  height: 50px;
+  border-radius: 50%; /* Makes the icons circular */
+  /* Add other styles as needed */
+}
+.card-title{
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-decoration: underline;
+  
+}
+.card-text{
+  font-family: 'Times New Roman', Times, serif;
+}
+.card-body{
+ background-color:linear-gradient(yellow,orange);
+     
+}
+
+
+.user-rating .carousel-item {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.user-rating .carousel-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.gal{
+  margin-top: -70px;
+  margin-bottom: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+}
+
+.gal1{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  
+}
+.contact{
+  margin-top: 250px;
+  margin-bottom: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+}
